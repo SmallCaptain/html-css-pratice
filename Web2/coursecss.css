@@ -1,0 +1,356 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+audio{
+	z-index: 5;
+}
+body{/*梦开始的地方*/
+		width: 100%;
+		height: 100%;
+		font-family: sans-serif;
+		font-size: 16px;
+		line-height: 160%;
+		overflow-x: hidden;
+}
+.h{/*所有类标题的设置方式*/
+	font-size: 150%;
+	color:#000000;
+	font-weight: bold;
+	font-family: KaiTi;
+	text-decoration: underline overline;
+	text-align: center;
+}
+table p{
+	margin: 0px;
+	color: #FF00FF;
+	font-weight: bold;
+	font-size: 20px;
+	background-color: aqua;
+	/*p:nth-child(){}这是个伪类 可以用于选择奇数偶数段落 这个也可以用在单元格之中 nth-child是个伪类*/
+}
+#main{/*仅仅是为了固定导航菜单不让他乱跑 导致需要一个额外的父元素*/
+	border-color: limegreen;
+	border-style: solid;
+	border-width: 5px;
+
+	width: 2300px;
+	height: auto;
+
+	margin-left: auto;
+	margin-right: auto;
+
+}
+#table h1{/*总标题*/
+
+	color:red;
+	border-style: solid;
+	border-color:#000000;
+	border-width: 4px;
+	
+	padding: 25px;
+	background-color:lightskyblue;
+
+
+	margin-top: 1px;
+	margin-bottom: 1px;
+	
+
+}
+
+/*导航菜单修改区*/
+table{
+	width: 100%;
+	/*caption-side: bottom;调整表头名称的位置*/
+	border-spacing: auto;/*在表格单元格中 用边框间距来代表外边距 而且是为整个表格设定的 不可以单独给一个单元格设置*/
+	/*border-collapse: collapse; 折叠边框 在Hear First HTML 与 CSS书中 他与上面的这个属性在615-616页被提出用于边框重叠
+		tr为行 th为表头列单元格 td为列单元格 th与td全部嵌套在tr里  text-align 属性可以用于单元格中文本对齐*/
+	/*table里面还可以再套一个table的*/
+}
+#tool{/*导航菜单*/
+
+	position: fixed;
+	width: 115px;
+	height: auto;
+
+	/*border-style: solid;
+	border-width: 5px;
+	border-color: red;*/
+
+	margin:0px;
+	margin-left: 70px;
+
+	z-index: 20;
+	background-color: lightskyblue;
+
+
+}
+#tool table tr{/*导航菜单里的列表集合 最好还是用表格 <table>写 这个真的没法完全去掉前面的编号啊之类的*/
+
+
+	/*border-style: solid;
+	border-color: black;
+	border-width: 2px;*/
+	
+	background-color:lightskyblue;
+	margin: 0px;
+}
+#tool table tr th{/**/
+	list-style: none;
+	
+	/*display:inline-block;/*这是个啥？ inline*/
+
+	font-size: 25px;
+
+	/*border-style: solid;
+	border-color:purple;
+	border-width: 2px;*/
+	/*可以在html中为th或td元素添加rowspan="x"属性来指明该单元格跨越多少行 x为数字
+		colspan 为跨越列 跨越行或列时 应该删除被跨越单元格的！内容！*/
+	padding: 5px;
+	
+	background-color:lightskyblue;
+	
+}
+#tool table tr th a:link,#tool table tr th a:visited{
+	color:slateblue;
+	border-bottom: none;
+	font-weight: bold; /*link表示点击过 visited表示看过了从需要删除历史记录*/
+
+	text-decoration: none;
+}
+
+#tool table tr th a:hover{/*他表示悬停被选中时候*/
+	background-color:slateblue;
+	color: blanchedalmond;
+}	
+#tool table tr th a:active{/*他表示被点击时*/
+	background-color:white;
+	color: black;
+}
+
+/*导航修改区结束*/
+#section_one header{/*幻影之血标题*/
+	/*position: absolute;绝对定位 该属性将可能导致这个块元素分层显示覆盖其他元素*/
+	color: #FF00FF;
+	width: auto;
+	text-align: center;
+	font-size: 25px;
+
+	border-style: solid;
+	border-color:black;
+	border-width: 1px;
+
+	padding: 1px;
+
+	margin-bottom: 0px;
+	margin-top: 0px;
+
+	background-color:lightskyblue;
+	
+	
+}
+img#picture_one{/*所有主角的照片*/
+	height: auto;
+	width: auto;
+
+	margin-top: 10px;
+
+}
+
+img#picture_two{/*幻影之血图片*/
+	
+	margin-bottom: 0px;
+	margin-left: 0px;
+	width: 38%;
+	height: 443px;
+	float: right;/*浮动 浮于页面上方 这个属性是用于控制分布的 他也可以用于div划分的一整块分布*/
+	
+}
+
+/**div以及html5新元素调整区*/ /* 采用表格布局 total将作为表格总框架 section_two和section_one作为列 额外增加tablecontainer作为总表格 添加table-rew为行 
+行需要包括前面两div/section*/
+header{/*页眉元素*/
+	width: 3000px;
+	height: auto;
+
+	border-style: solid;
+	border-color: black;
+	border-width: 5px;
+
+	background-color: lightskyblue;
+
+	margin-top: 0px;
+	margin-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+
+	/*position: fixed;
+	z-index: 5;*/
+}
+footer{/*页脚元素*/
+	width: 3000px;
+	height: auto;
+
+	border-style: solid;
+	border-color: black;
+	border-width: 5px;
+
+	margin-top: 50px;
+	margin-bottom:  0px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: blueviolet;
+
+
+}
+#table{/*总表格框架 这里必须提醒清楚 这个是表格布局 和表格<table>属性完全是俩个东西 */
+	position: relative;/*这个与子元素配合使用 详见接下来的 div_JOJO_title 相对定位 单独使用和固定定位相似 但是不会覆盖内容*/
+	display: table;
+	border-spacing: 10px;
+
+	width: 1920px;/*1700px;*/
+	height: 1080px;/*1800px;*/
+
+	
+	margin: 0px;
+	margin-left: auto;
+	margin-right: auto;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: black;
+	
+}
+.table_rew{/*行 所有类行总设置 如有独立需求请采用特定id选择*/
+
+	width: auto;
+	height: auto;
+
+	border-width: 5px;
+	border-color: red;
+	border-style: solid;
+}
+#section_one{/*第一列 为幻影之血内容区*//*section是html5的新元素 为主内容区哦 如果说觉得这个内容是次要内容 可以用<aside>元素为侧边栏来指定 可分左右侧边栏*/
+
+	display: table-cell;
+
+	width: 56%;/*56%*/
+	height: auto;/*30%*/
+	
+	border-width: 5px;
+	border-style: solid;
+	border-color: black;
+	margin: 0px;
+	
+	background-color:white;
+	vertical-align: top;/*要求文本与上单元格对齐 对齐方式有 top middle bottom*/
+}
+#section_two{/*第二列*//*也是第二个内容区 只有系列主角的照片*/
+
+	display: table-cell;/*列的单元格*/
+
+	margin: 0px;
+
+	border-style: solid;
+	border-width: 5px;
+	border-color: black;
+
+	width: auto;
+	height: auto;
+
+	background-color: black;
+
+}
+
+#section_one #section_one_article{/*幻影之血 原本内容区的内容以字段p元素为主 主内容区里的内容由 <article> 组成 所以p元素被article元素代替*/
+	text-align: center;
+
+	border-color:#000000;
+	border-width: 5px;
+	border-style: solid;
+
+	
+	border-bottom-left-radius: 3em;
+	border-bottom-right-radius: 3em;
+	border-top-right-radius: 3em;
+	border-top-left-radius: 3em;
+
+	background-color:lightskyblue;
+
+	padding: 30px;
+	padding-right: 22px;
+
+	margin: 0px;
+
+	background-image: url(images/background_one.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 699px;
+	
+
+
+	width: 56%;/*424*/
+	height: 373px;/*175*/
+	font-size: 25px;
+	line-height: 1.5;
+	
+	
+}
+#div_JOJO_title{
+	position: absolute;/*fixed 会使这个div相对于你的屏幕放置 就好像烦人的广告弹窗 怎么滚动怎么跑都还在你的屏幕里 或许可以用来做一个垂直工具栏
+	 absolute 配合父元素 relative使用 relative可以切换absolute的绝对定位对象 如果你不设置父元素 将默认对照html元素 即浏览器*/
+	top: 20px;
+	left: 750px;
+	z-index: 1;
+	
+}
+#div_video_1{
+	position:absolute;
+	margin: 0px;
+	margin-left: 0px;
+	
+}
+
+/*div html5新元素调整区到此结束*/
+/*连接调整区*/
+#a1 a:link{
+	color: red;
+}
+#a1 a:visited{
+	color: green;
+}
+#a1 a:hover{
+	color: blue;
+}
+#a1 a:focus{
+	color: yellow;
+}
+#a1 a:active{
+	color: gray;
+}
+#spon_1{
+	color: red;
+}
+#a1{	
+	border-width: thin;
+	border-style: solid;
+	border-color: black;
+	
+}
+/*连接调整区结束*/
+/*没有用到但是书本上有讲述并且可能以后会用到的东西*/
+@font-face{
+	font-family: "my char";
+	src:url();/*这一部分用于自定义字体*/
+
+}
+@media screen and (max-device-width: 480px){
+	.p1{
+
+		/*主要用于做不同设备的屏幕大小适配 这一部分用于自定义媒体查询 当屏幕宽度不高于480px时 区块内的代码将被执行 IE8以及以前版本不支持该功能
+		也就是CSS3 响应式布局的实现方法*/
+	}
+}
+/* <progress>属性用于显示任务的完成进度条 <figure>用于定义类似照片图表甚至清单等独立内容 <canvas> 用于显示使用js绘制的动画*/

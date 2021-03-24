@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="coursecss.css">
+		<!--
+		<link rel="stylesheet" type="text/css" href="" media="screen and (max-device-width: 480px)">
+		media为媒体查询 可以使样式表不仅仅局限于浏览器
+		-->
+		<title>"小船长个人练习"</title>
+		
+	</head>
+	<body>
+		<header id="hr"><!--这里是页眉元素 html5的新元素-->
+			<p class="p1">
+				这里是一个页眉哦
+			</p>
+			<!--<meter min="0" max="20" value="10"></meter> 这是一个量表。。。 min与max代表最小最大值 value表示目前真值-->
+		</header>
+	<div id="main">
+		
+		<nav id="tool"><!--这里将做一个垂直的导航 可以修改一下 用table标签写-->
+			<table>
+				<caption>
+					<p>导航菜单</p>
+				</caption>
+					<!--ol为有序集合 ul为无序集合 tr为行 th为表头列单元格 td为列单元格 th与td全部嵌套在tr里-->
+				<tr>
+					<th><a href="course.html#hr">返回顶部</a></th>
+				</tr>
+				<tr>
+					<th><a href="#t1">作品介绍</a></th>
+				</tr>
+				<tr>
+					<th><a>人物简介</a></th>
+				</tr>
+				<tr>
+					<th><a href="#ft">返回底部</a></th>
+				</tr>
+			</table>
+
+		</nav>
+
+		<div id="table"><!--表格布局-->
+			<div id="div_video_1">
+				<video id="video_1" controls poster="images/all.jpg" width="512" height="288">
+					<!--以source标签里的src属性 替代在video标签里面的src 这样在加载视频的时候每一个source标签都会被尝试一遍 如果第一个不行就会尝试第二个 可以放不同格式的视频-->
+					<source src="videos/strange_video.mp4">
+				
+				</video>
+				<object></object><!--这个元素可以用来作为浏览器无法识别video标签的时候的一种退路 当video不被识别 object将被识别并执行-->
+
+				<!--controls这个是表示用户有权限控制视频播放之类的 autoplay 会导致这个视频自动播放 去掉则需要用户自行播放了 poster则在视频尚未播放的时候给一个图片作为显示画面 
+					loop属性 会导致视频循环播放 width与height如果处理不好会有黑边出现最好和视频文件的格式一致 preload 用于细粒度地控制视频如何
+					加载来实现优化（我也不是很懂）
+					type='video/ogg; condecs="theora,vorbis"'用于指定视频格式  theora为视频编码器 vorbis为音频编译码器 这个可以加进source与video标签里-->
+				<audio controls>
+					<source src="audio/horse.ogv"><!--发现了嘛 audio和video属性共通的-->
+				</audio>
+			</div>
+			
+			<div id="div_JOJO_title">
+				<img src="images/JOJO.jpg">
+			</div>
+			
+			<h1 class="h" id="t1">系列作品介绍</h1>
+
+			<div class="table_rew"><!--这里为一行-->
+				<div id="section_two"><!--第二列-->
+				
+					<img id="picture_one" src="images/all.jpg" alt="这是一个主角照片">
+				
+				</div>
+
+				<section id="section_one"><!--更改为section之一 同时也为第二列-->
+					<header>《幻影之血》</header><!--没想到吧~ 页眉不只是做主页眉 可以做某个特定区块的页眉哦 页脚同理-->
+
+						<img id="picture_two"src="images/first.jpg">
+
+						<article id="section_one_article">
+							初代JOJO（<spon id="spon_1">乔纳森·乔斯达</spon>）
+							的父亲收留了其“救命恩人”的儿子，一个名叫迪奥·布兰度的孤儿，抚养他成人,但迪奥图谋JOJO家族的财产，谋杀了乔纳森的父亲。
+							<br>事败之后，为了报复，不惜戴上神秘的石鬼面具，成为了不老不死的吸血鬼,得到了不可思议的强大力量。
+							而乔纳森后来也跟威尔·A·谢皮利学习了唯一能杀死吸血鬼的波纹气功。<br>他的青春是与迪奥一起的青春，而乔纳森在结尾要为这段青春画上句号！
+							
+						</article>
+					
+				</section>
+			</div>
+			<div class="table_rew"><!--这个是第二行 结构一样的-->
+
+				<p class="p1">这里是第二行</p>
+				
+
+			</div>
+			
+			<!--
+			<div id="a1">
+				<a href="course.html#t1" title="从这里返回顶部">返回顶部</a>
+			</div>
+
+			<time datetime="2012-02-18">2/18/2012</time>
+			-->
+
+		</div>
+    </div>
+
+		<footer id="ft">
+			<p>这里是页脚</p>
+		</footer>
+
+	</body>
+	
+</html>

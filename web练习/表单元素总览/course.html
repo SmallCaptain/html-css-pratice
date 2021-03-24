@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>表单</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css.css">
+
+    </head>
+    <body>
+        <div id="main">
+            <form action="http://wickedlysmart.com/hfhtmlcss/contest.php" method="POST">
+            <div class="null">
+
+            </div>
+                <section id="section_one"> 
+                    输入用户名与密码 进行登录<br>
+
+                    用户名:<br><input type="text" name="username" value=""><br>
+                    密码  :<br><input type="text" name="userpassword" value=""><br>
+
+                    <input type="submit">
+                    <input type="radio" name="yesornot" value="yes"> yes
+                    <input type="radio" name="yesornot" value="not"> not
+                    <br><input type="checkbox" name="spice" name="agree"> 同意 
+                    <select name="system">
+                        <option value="windows">windows</option>
+                        <option value="linux">linux</option>
+                    </select>
+
+                </section>
+                <section id="section_two">
+                    <textarea name="textarea_1" rows="10" cols="10">
+                        这里是一个文本框
+                    </textarea>
+                    <input type="number" min="0" max="30">
+                    <input type="range" min="0" max="100" step="1">
+                    <input type="color">
+                    <input type="date">
+                    <input type="email">
+                    <input type="tel">
+                    <input type="url">
+                </section>
+                </form>
+        </div>
+    </body>
+</html>
