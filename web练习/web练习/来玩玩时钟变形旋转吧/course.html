@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            /* 600-1200px正常情况下 */
+            perspective: 800px;
+
+        }
+        div.clock{
+            position: relative;
+            width: 1024px;
+            height: 1024px;
+
+            margin: 0px auto;
+            background-image: url(images/1024px-Analogue_clock_face.svg.png);
+        }
+        div.clock>div{
+            position: absolute;
+        }
+        div.clock div.sec-wrapper{
+            
+            width: 712px;
+            height: 712px;
+
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin:auto;
+            animation: clock-run 10s steps(60) infinite;
+
+            /* background-color: blue; */
+        }
+        div.sec{
+
+            width: 5px;
+            height: 50%;
+
+            margin: 0px auto;
+            left: 520px;
+
+            background-color: black;
+        }
+        div.clock div.min-wrapper{
+            width: 512px;
+            height: 582px;
+
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin:auto;
+
+            animation: clock-run 600s infinite steps(60);
+
+            /* background-color: black; */
+        }
+        div.clock div.min{
+            width: 10px;
+            height: 50%;
+
+            background-color: black;
+            margin: 0px auto;
+        }
+        div.clock div.hour-wrapper{
+            width: 512px;
+            height: 412px;
+
+             left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin:auto;
+
+            animation: clock-run  7200s infinite steps(12);
+
+            /* background-color: black; */
+        }
+        div.clock div.hour{
+            width: 20px;
+            height: 50%;
+
+            margin: 0px auto;
+            background-color: black;
+        }
+        @keyframes clock-run{
+            from{
+               
+                transform: rotateZ(0);
+            }
+            to{
+               
+                transform: rotateZ(360deg);
+            }
+
+        }
+    </style>
+
+</head>
+<body>  
+    <div class="clock">
+        <div class="hour-wrapper"><div class="hour"></div></div>
+        <div class="min-wrapper"><div class="min"></div></div>
+        <div class="sec-wrapper"><div class="sec"></div></div>
+    </div>
+
+</body>
+</html>

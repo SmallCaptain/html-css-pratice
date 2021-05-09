@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.rboy{
+            width: 256px;
+            height: 256px;
+
+            margin: 0 auto;
+            background-image: url(images/bg2.png);
+
+            animation-name:rboy-run;
+            animation-duration: 1s;
+            animation-timing-function: steps(6);
+            animation-iteration-count: infinite;
+            /* animation-direction: alternate; */
+        }
+        @keyframes rboy-run{
+            from{
+                background-position: 0 0;
+
+            }
+            to{
+                background-position: -1536px 0;
+
+            }
+        }
+        div.rboy:hover{
+            animation-play-state: paused;
+        }
+
+        .telampe{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            background-image: url(images/trump_run.png);
+            animation-name: telampe-behind;
+            animation-duration: 1s;
+            /* animation-direction: alternate; */
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(5);
+        }
+        div.telampe1{
+            animation-name:telampe-behind;
+        }
+        div.telampe2{
+            animation-name:telampe-right;
+        }
+        div.telampe3{
+            animation-name:telampe-back;
+        }
+        div.telampe4{
+            animation-name:telampe-left;
+        }
+        @keyframes telampe-behind{
+                from{
+                    background-position: 0 0;
+                }
+                to{
+                    background-position: 500px 0;
+                }
+
+        }
+        @keyframes telampe-right{
+            from{
+                background-position: 0 100px;
+            }
+            to{
+                background-position: 500px 100px;
+            }
+
+        }
+        @keyframes telampe-back{
+            from{
+                background-position: 0 200px;
+            }
+            to{
+                background-position: 500px 200px;
+            }
+
+        }
+        @keyframes telampe-left{
+            from{
+                background-position: 0 300px;
+            }
+            to{
+                background-position: 500px 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rboy">
+
+    </div>
+
+    <div class="telampe telampe1">
+
+    </div>
+    <div class="telampe telampe2">
+
+    </div>
+    <div class="telampe telampe3">
+
+    </div>
+    <div class="telampe telampe4">
+
+    </div>
+</body>
+</html>

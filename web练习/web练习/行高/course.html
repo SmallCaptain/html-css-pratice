@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高</title>
+    <link rel="stylesheet" type="text/css "href="#">
+    <style>
+        .p1{
+            width: 150px;
+            font-size: 20px;/*文字框高度*/
+            /*height: 1px;/*这调的盒子高度*/
+            line-height: 20px;/*算单行的*/
+
+            border: 1px red solid;
+
+            text-align:center;
+            font: normal normal 14px/1 微软雅黑;
+            /* vertical-align: ; 这个属性用于父子元素间基线对准*/
+        }
+        .box1{
+            width: 50px;
+            white-space: nowrap;
+            overflow: hidden; 
+            text-overflow: ellipsis;
+            /* 可选值
+                normal默认值
+                nowrap 不换行 出现滚动条
+                pre 保留空白 在代码文本区怎么写就怎么显示 不用打br回车了！
+
+            以上三行可以省略文本 指定宽度 text-overflow ellipsis对溢出内容
+            显示省略号 四个缺一不可
+            */
+        }
+
+    </style>
+</head>
+<body>
+    
+    <p class="p1">你好<br>12333</p>
+    <div class="box1">
+        12344561234897896541513215462132154621562131111111111111111111111111111111111111111111111
+    </div>
+    
+</body>
+</html>

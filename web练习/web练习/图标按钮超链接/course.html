@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a1{
+            display: block;
+            width: 93px;
+            height: 29px;
+            background: url('Button/btn.png') no-repeat;
+            /* 雪碧图 你值得拥有 用于解决图片加载显示的问题 其实就是把图片集合到一个
+            图里 然后进行位置挪动 但仅仅对于背景有效 img无效 */
+        }
+        .a1:hover{
+            background-position: -93px;
+        }
+        .a1:active{
+            background-position: -186px;
+        }
+    </style>
+</head>
+<body>
+    <a href="" class="a1"></a>
+    
+</body>
+</html>

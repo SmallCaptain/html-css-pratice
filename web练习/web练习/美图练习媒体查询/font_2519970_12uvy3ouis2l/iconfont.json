@@ -1,0 +1,51 @@
+{
+  "id": "2519970",
+  "name": "移动端练习",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6999502",
+      "name": "旗帜",
+      "font_class": "tuya_huaban",
+      "unicode": "e75d",
+      "unicode_decimal": 59229
+    },
+    {
+      "icon_id": "13646840",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "14488455",
+      "name": "下载",
+      "font_class": "ziyuan27",
+      "unicode": "e778",
+      "unicode_decimal": 59256
+    },
+    {
+      "icon_id": "16394883",
+      "name": "打开的书",
+      "font_class": "dakaideshu",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "10103919",
+      "name": "列表",
+      "font_class": "list01",
+      "unicode": "e73f",
+      "unicode_decimal": 59199
+    },
+    {
+      "icon_id": "14942928",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    }
+  ]
+}

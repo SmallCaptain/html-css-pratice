@@ -1,0 +1,30 @@
+{
+  "id": "2465863",
+  "name": "电影小卡片练习图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1032410",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "5950863",
+      "name": "脸书",
+      "font_class": "lianshu",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "19494209",
+      "name": "定位",
+      "font_class": "dingwei",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    }
+  ]
+}

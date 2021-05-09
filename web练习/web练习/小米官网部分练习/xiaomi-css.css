@@ -1,0 +1,625 @@
+/* 顶部导航条设置区域 */
+#div-header{
+    width: auto;
+    height: 140px;
+}
+div.div-nav-container a:hover{
+    color: #FFFFFF;
+}
+
+.div-nav{
+    width: auto;
+    background-color: #333333;
+}
+.div-nav-container{
+    width: 1226px;
+    margin:0px auto;
+    background-color: #333333;
+
+}
+ul.nav-container-ul1 li{
+    list-style-type: none;
+    padding: 0px;
+
+    float: left;
+}
+ul.nav-container-ul1{
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    float: left;
+}
+ul.nav-container-ul1 a,.usermeg-a,.shopping a{
+    text-decoration: none;
+    display: inline-block;
+    font: 12px/40px 微软雅黑;
+    color: #B0B0B0;
+
+}
+ul.nav-container-ul1 .fenge,.fenge{
+    float: left;
+    width: 1px;
+    height: 16px;
+    background-color: #424242;
+    margin: 12px 5.6px 0px 5.6px;
+    
+}
+div.div-usermeg{
+    height: 40px;
+    margin-right: 20px;
+    float: right;
+}
+div.shopping{
+    position: relative;
+
+    width: 140px;
+    height: 40px;
+    background-color: #424242;
+
+    /* border: 1px solid transparent; */
+    
+    
+    float: right;
+}
+div.shopping a{
+    position:absolute;
+    z-index: 500;
+}
+div.shopping:hover a{
+    background-color: #FFFFFF;
+    border: 1px solid #DADCE0;
+    color: #FF6752;
+    border-bottom: 0px;
+}
+/* 下载APP的隐藏菜单 */
+ul.nav-container-ul1 li:nth-of-type(11){
+    position: relative;
+}
+ul.nav-container-ul1 li:nth-of-type(11):hover div.app-menu{
+        height: 154px;
+       
+        /* 一个缺陷 这个边框。。阴影将会只有悬停时显现 */
+}
+ul.nav-container-ul1 li:nth-of-type(11):hover > a::after{
+    display: block;
+}
+div.app-menu{
+    position: absolute;
+    /* height 0 与overflow transition 一起完成过渡的动画效果 */
+    width: 90px;
+    height: 0px;
+    overflow: hidden;
+
+    box-shadow: 0px 0px  10px rgba(100,100,100,0.3);
+    background-color: white;
+    left: -22px;
+   
+    z-index: 499;
+
+    transition: height 0.5s;
+}
+div.app-menu img{
+    width: 90px;
+    height: 90px;
+    /* margin: 0px 40px 0px 40px; */
+    vertical-align: bottom;
+}
+div.app-menu p{
+    color: black;
+    text-align: center;
+}
+/* 下载app的小三角 */
+ul.nav-container-ul1 li:nth-of-type(11) a::after{
+    position: absolute;
+    display: none;
+
+    content: '';
+    width: 0px;
+    height: 0px;
+    line-height: 1;
+    
+    border: 8px solid transparent;
+    border-top: none;
+    border-bottom-color:#FFFFFF;
+
+    z-index: 500;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+
+
+/* 下载app的小三角结束*/
+/* 下载APP的隐藏菜单到此为止 */
+/* 购物车的隐藏菜单 */
+div.shopping-menu{
+    display: block;
+    position: absolute;
+
+    width: 435px;
+
+    height: 0px;
+    left: -293px;
+    top:  40px;
+
+    background-color: white;
+    
+    box-shadow: 0px 0px 10px rgb(100,100,100);
+
+    transition: height 1s;
+    z-index: 499;
+}
+div.shopping:hover div.shopping-menu{
+    height: 126px;
+}
+/* 购物车的隐藏菜单到此结束 */
+.usermeg-a{
+   
+    float: left;
+}
+.shopping a{
+    width: 140px;
+    text-align: center;
+}
+.shopping a::before{
+    content: '\e600';
+    font-family: 'iconfont';
+    font-size: 16px;
+    padding-right: 5px;
+}
+/* 小米条设置 */
+.xiaomi-header-wrapper{
+    position: relative;
+    height: auto;
+    width: auto;
+}
+.xiaomi-header{
+    width: 1226px;
+    height: 100px;
+    margin: 0px auto;
+}
+div.xiaomi-logo{
+    position: relative; /*为了动画效果而打开*/
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    margin: 0px;
+
+    overflow: hidden; 
+   
+    margin-top: 22px;
+}
+div.xiaomi-logo a{
+    position: absolute;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+
+    left: 0px;
+    transition:left 0.25s;
+}
+div.xiaomi-logo .logo{
+    background-image: url(images/logo-mi2.png);
+}
+div.xiaomi-logo .logo-home{
+     left: -57px; 
+    background-image: url(images/logo-mi2.png);
+}
+div.xiaomi-logo:hover>.logo{
+    left: 55px;
+}
+div.xiaomi-logo:hover>.logo-home{
+    left: 0px;
+}
+.xiaomi-header a{
+    float: left;
+}
+.xiaomi-header img{
+    display: inline-block;
+    line-height: 100px;
+    margin-top: 22px;
+}
+
+ul.xiaomi-ul1{
+    width: 1100px;
+    height: 88px;
+    margin: 0px;
+    padding: 12px 0px 0px 30px;
+    float: right;
+
+}
+ul.xiaomi-ul1 li{
+    /* display: inline-block;如果你希望某个div成为inline-block并且对他里面的子元素进行排列 请记得设置基线 */
+    list-style-type: none;
+    padding: 0px;
+    float: left;
+    /* vertical-align: top; */
+}
+ul.xiaomi-ul1 li a{
+    text-decoration: none;
+    padding: 33.5px 10px 33.7px 10px;
+    color: #333340;
+}
+ul.xiaomi-ul1 li a:hover{
+    color:#FF6700;
+}
+ul.xiaomi-ul1 li:nth-child(1){
+    width: 127px;
+    height: 88px;
+    padding-right: 15px;
+}
+ul.xiaomi-ul1 li.input-search{
+  margin: 0px;
+  height: 88px;
+  float: right;
+
+}
+ul.xiaomi-ul1 li.input-search form{
+    width: 262px;
+    height: 50px;
+    margin-top: 16px;
+    padding: 0px;
+
+}
+ul.xiaomi-ul1 li.input-search input{
+    width: 200px;
+    height: 50px;
+    border: 0px;
+    padding: 0px;
+
+    padding-left: 5px;
+    font-size: 16px;
+    float: left;
+    border: 1px solid  #E0E0E0;
+    outline: none;
+}
+
+ul.xiaomi-ul1 li.input-search input:focus,
+ul.xiaomi-ul1 li.input-search input:focus + button{
+    border-color: orange;
+}
+/*
+ul.xiaomi-ul1 li.input-search form>input:hover,
+ul.xiaomi-ul1 li.input-search form>input:hover + button{
+    border-color:#B4B4B4;
+}
+ul.xiaomi-ul1 li.input-search form>button:hover,
+ul.xiaomi-ul1 li.input-search form>button:hover + input{
+    border-color:#B4B4B4;
+}*/
+
+ul.xiaomi-ul1 li.input-search button{
+    height: 52px;
+    width: 50px;
+
+    padding: 0px;
+    
+    background-color:white;
+    border-color: #DFDFDF;
+
+    font-size: 16px;
+    float: left;
+    border: 1px solid #E0E0E0;
+    border-left: 0px;
+
+    outline: none;
+}
+ul.xiaomi-ul1 li.input-search button:hover{
+    color: white;
+    background-color: orange;
+}
+/* 小米条隐藏的大菜单 */
+ul.xiaomi-ul1 .xiaomi-ul1-menu1,
+ul.xiaomi-ul1 .xiaomi-ul1-menu2,
+ul.xiaomi-ul1 .xiaomi-ul1-menu3,
+ul.xiaomi-ul1 .xiaomi-ul1-menu4,
+ul.xiaomi-ul1 .xiaomi-ul1-menu5,
+ul.xiaomi-ul1 .xiaomi-ul1-menu6,
+ul.xiaomi-ul1 .xiaomi-ul1-menu7{
+    position: absolute;
+    display: block;
+    
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+
+    background-color: white;
+    
+    top: 100px;
+    left: 0px;
+    box-shadow: 0px 2px 5px  rgb(100,100,100);
+    
+    z-index: 499;
+    transition: height 0.5s;
+}
+ul.xiaomi-ul1 li:nth-child(2):hover .xiaomi-ul1-menu1,
+ul.xiaomi-ul1 li:nth-child(3):hover .xiaomi-ul1-menu2,
+ul.xiaomi-ul1 li:nth-child(4):hover .xiaomi-ul1-menu3,
+ul.xiaomi-ul1 li:nth-child(5):hover .xiaomi-ul1-menu4,
+ul.xiaomi-ul1 li:nth-child(6):hover .xiaomi-ul1-menu5,
+ul.xiaomi-ul1 li:nth-child(7):hover .xiaomi-ul1-menu6,
+ul.xiaomi-ul1 li:nth-child(8):hover .xiaomi-ul1-menu7{
+    height: 300px;
+}
+
+/* 小米条隐藏的大菜单结束 */
+/*  小米条设置结束*/
+/* 顶部导航条设置区域结束 */
+
+/* 上半部分 各种购买 以及服务 */
+.maincontainer{
+    width: 1226px;
+    margin: 0 auto;
+
+}
+ul.maincontainer-asidenav{
+    width: 234px;
+    height: 420px;
+    margin: 0px;
+    padding: 20px 0px;
+
+    position: relative;
+    /* float: left; */
+    z-index: 106;
+    background-color: rgba(151,149,149,0.6);
+}    
+.maincontainer-asidenav li{
+    list-style-type: none;
+    padding: 0px;
+}
+.maincontainer-asidenav li a{
+    display: inline-block;
+    width: 184px;
+    height: 42px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 42px;
+
+    padding-left: 30px;
+    padding-right: 20px;
+}
+.maincontainer-asidenav li:hover{
+    background-color: #FF6700;
+}
+.maincontainer-asidenav li a i{
+    content: '\e639';
+    font-family: 'iconfont';
+    font-size: 5px;
+    color: #FFFFFF;
+
+    float: right;
+
+    padding: 0px !important;
+
+}
+
+.maincontainer-img{
+    position: relative;
+}
+.maincontainer-imgs{
+    width: 1226px;
+    height: 460px;
+
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+}
+ul.maincontainer-radio-botton{
+    position: absolute;
+    z-index: 105;
+    padding: 0px;
+    top: 400px;
+    left: 1120px;
+}
+
+ul.maincontainer-radio-botton li{
+    /* position: absolute; */
+    list-style-type: none;
+    float: left;
+    /* z-index: 105; */
+    margin-left: 10px;
+    width: 5px;
+    height: 5px;
+    border: 1px solid rgb(181,181,181);
+    border-radius:50%;
+    background-color:rgb(148,148,148);
+}
+ul.maincontainer-radio-botton li:hover{
+    background-color: rgba(248,248,248,0.5);
+    border-color: rgb(100,100,100);
+}
+
+ul.maincontainer-radio-botton li:nth-of-type(2):hover img.maincontainer-imgs:nth-of-type(2){
+    z-index: 300;
+}
+/* 轮播图按钮 */
+div.maincontainer-img .lbutton,
+div.maincontainer-img .rbutton{
+    position: absolute;
+    display: block;
+
+    top: 0px;
+    bottom: 0px;
+    margin: auto 0px;
+
+    width: 41px;
+    height: 69px;
+    left: 184px;
+
+    z-index: 101;
+}
+div.maincontainer-img .lbutton{
+    left: 234px;
+    background-image: url(images/icon-slides.png);
+    background-position: -84px 0;
+}
+div.maincontainer-img .rbutton{
+    left: 1185px;
+    background-image: url(images/icon-slides.png);
+    background-position: -123px 0;
+}
+div.maincontainer-img .lbutton:hover{
+    background-position: 0 0;
+
+}
+div.maincontainer-img .rbutton:hover{
+    background-position: -41px 0;
+}
+/* 上半部分右边导航条的隐藏菜单 */
+div.maincontainer-asidenav-menu1,
+div.maincontainer-asidenav-menu2,
+div.maincontainer-asidenav-menu3,
+div.maincontainer-asidenav-menu4,
+div.maincontainer-asidenav-menu5,
+div.maincontainer-asidenav-menu6,
+div.maincontainer-asidenav-menu7,
+div.maincontainer-asidenav-menu8,
+div.maincontainer-asidenav-menu9,
+div.maincontainer-asidenav-menu10{
+    position: absolute;
+    display: none;
+    width: 992px;
+    height: 460px;
+    z-index: 110;
+
+    background-color: white;
+    left: 234px;
+    top: 0px;
+    box-shadow: 0px 0px 2px rgb(100,100,100);
+
+}
+.maincontainer-asidenav li:nth-of-type(1):hover div.maincontainer-asidenav-menu1,
+.maincontainer-asidenav li:nth-of-type(2):hover div.maincontainer-asidenav-menu2,
+.maincontainer-asidenav li:nth-of-type(3):hover div.maincontainer-asidenav-menu3,
+.maincontainer-asidenav li:nth-of-type(4):hover div.maincontainer-asidenav-menu4,
+.maincontainer-asidenav li:nth-of-type(5):hover div.maincontainer-asidenav-menu5,
+.maincontainer-asidenav li:nth-of-type(6):hover div.maincontainer-asidenav-menu6,
+.maincontainer-asidenav li:nth-of-type(7):hover div.maincontainer-asidenav-menu7,
+.maincontainer-asidenav li:nth-of-type(8):hover div.maincontainer-asidenav-menu8,
+.maincontainer-asidenav li:nth-of-type(9):hover div.maincontainer-asidenav-menu9,
+.maincontainer-asidenav li:nth-of-type(10):hover div.maincontainer-asidenav-menu10{
+    display: block;
+}
+/* 上半部分右边导航条的隐藏菜单结束 */
+/* 上半部分中第二部分开始 */
+div.maincontainer-bottom{
+    width: 1240px;
+    height: 170px;
+
+
+    margin: 14px 0px 0px 0px;
+}
+div.maincontainer-bottom-div{
+    position: relative;
+}
+div.maincontainer-bottom div{
+    float: left;
+}
+div.maincontainer-bottom-div:nth-child(1){
+    width: 228px;
+    padding: 3px;
+    background-color: rgb(95,87,80);
+}
+div.maincontainer-bottom-nav{
+    position: relative;
+    width: 70px;
+    height: 82px;
+    padding: 0px 3px;
+    background-color: rgb(95,87,80);
+}
+div.maincontainer-bottom-nav::before{
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+    left: 6px;
+    /* top: 5px; */
+
+}
+div.maincontainer-bottom-nav::after{
+    
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 70px;
+    background-color: #665e57;
+    top: 7px;
+    left: 0px;
+
+}
+div.maincontainer-bottom div.maincontainer-bottom-div:not(:nth-child(1)){
+    margin-left: 14px;
+}
+div.maincontainer-bottom-nav a{
+    display: inline-block;
+    width: 70px;
+    height: 46px;
+    padding-top: 18px;
+    color: #CFCCCA;
+    text-decoration: none;
+    text-align: center;
+}
+div.maincontainer-bottom-nav a:hover{
+    color: #F7F7F7;
+}
+div.maincontainer-bottom-nav a i{
+    display: block;
+    font-size: 22px;
+    margin-bottom: 4px;
+    
+}
+div.maincontainer-bottom-div img{
+    width: 316px;
+    height: 170px;
+}
+div.maincontainer-bottom-div a:hover img{
+    transition: 0.2s;
+   box-shadow: 0px 0px 30px rgba(100,100,100,0.8);
+}
+
+/* 上半部分中第二部分结束 */
+/* 上半部分结束 */
+/* 小米右侧导航条 */
+ul.xiaomi-east-nav{
+    position: fixed;
+    width:84px;
+    height: 454px;
+
+    margin: 0px;
+    padding: 0px;
+
+    right: 50%;
+    margin-right: -697px;
+
+    bottom: 300px;
+
+    z-index: 600;
+    background-color:#FFFFFF;
+    box-shadow: 0px 0px 3px rgb(100,100,100);
+}
+ul.xiaomi-east-nav li{
+    color: #999999;
+    height: 90px;
+    list-style-type: none;
+    padding: 0px;
+    text-align: center;
+}
+ul.xiaomi-east-nav li i{
+    display: block;
+
+    font-size: 30px;
+    text-align: center;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+}
+ul.xiaomi-east-nav li:not(:nth-of-type(1)){
+    border-top: 1px solid #F5F5F5;
+}
+ul.xiaomi-east-nav li:hover{
+    color:#FF6903;
+}
+/* 小米右侧导航条结束 */

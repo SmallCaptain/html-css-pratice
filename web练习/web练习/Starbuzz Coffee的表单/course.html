@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>咖啡表单</title>
+        <link rel="stylesheet" type="text/css" href="course_css.css">
+    </head>
+    <body>
+        <div id="main">
+            <div id="table">
+                <div id="table_rew_1">
+                    <div id="table_cell_1">
+                        <p>这是一张咖啡的图片 请自行脑补</p>
+                    </div>
+                    <div id="table_cell_2">
+                        <form class="form_1" action="" method="POST">
+                            <label>Choose your beans:
+                                <select name="coffee">
+                                    <option value="House Blend">House Blend</option>
+                                    <option value="Shade Grown Bolivia Supremo">Shade Grown Bolivia Supremo</option>
+                                    <option value="Organic Guatemala">Organic Guatemala</option>
+                                    <option value="Kenya">Kenya</option>
+                             
+                                </select>
+                            </label> 
+                            <br>
+                            <label for="radio">Type:</label><br>
+                            <label><input class="radio" type="radio" name="coffeetype" value="Whole bean" checked> 
+                                Whole bean</label>
+                            <br>
+                            <label><input class="radio" type="radio" name="coffeetype" value="Ground"> Ground</label>
+                            <br>
+                            <label>Number of bags：<input id="input_NOB" name="number" type="number" min="0" max="9999" placeholder="请输入数量" required="数量不可为空"></label> 
+                            <br>
+                            <label for="input_MABD">Must arrive by date:<input id="input_MABD" name="date" type="date"></label>
+                                <!--到这里位置右上半部分结束 开始左下半部分-->
+                            <fieldset id="fieldset_2">
+                                <legend>Extras:</legend>
+                                <label class="label_se"><input type="checkbox" name="checkbox" class="checkbox">Gift warp</label>
+                                <label class="label_se"><input type="checkbox" name="checkbox" class="checkbox">Include catalog with order</label>
+                            </fieldset>    
+                                <fieldset id="fieldset_1">
+                                    <legend>Ship to:</legend>
+                                    <label class="label_se">Name: <input class="text" type="text" name="text"></label>
+                                    <label class="label_se">Address: <input class="text" type="text" name="text"></label>
+                                    <label class="label_se">City: <input class="text" type="text" name="text"></label>
+                                    <label class="label_se">State: <input class="text" type="text" name="text"></label>
+                                    <label class="label_se">Zip: <input class="text" type="text" name="text"></label>
+                                    <label class="label_se">Phone: <input class="text" type="text" name="text"></label>
+                                </fieldset>
+                                <label class="label_se">Customer Comments: <br><textarea name="comments" rows="15" cols="100"></textarea></label>
+                                <label id="label_submit"><input id="submit" type="submit"></label>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

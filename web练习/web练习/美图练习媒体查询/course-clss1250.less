@@ -1,0 +1,206 @@
+// 这里是大于1250px时的布局
+
+@media only screen and (min-width: 1250px),(min-width:1050px)and(max-width:1250px){
+
+    html {
+        font-size: 16px;
+
+        body {
+            margin: 0px;
+
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+
+        div#meitu {
+            div.meitu-header {
+                display: block;
+                margin: 0px auto;
+                width: 100%;
+                height: (488/16rem);
+
+                background-image: url(image/meitu-background.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                // 导航条设置
+                nav {
+                    max-width: (1200/16rem);
+                    width: 100%;
+                    height: (90/16rem);
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    // meitulogo
+                    div.first a img {
+                        width: (107/16rem);
+                        height: (30/16rem);
+
+
+                    }
+                    // 1050px部分隐藏
+                    a.i-link{
+                        display: none;
+                    }
+                    div.second-i-link{
+                        display: none;
+                    }
+                    
+                    //导航部分 
+                    div.second {
+                        height: 100%;
+                        width: (696/16rem);
+
+                        a,
+                        span {
+                            font-size: 1rem;
+                            font-weight: bold;
+                            text-decoration: none;
+                            color: #FFF8FE;
+
+                        }
+
+                        a {
+                            display: inline-block;
+                            height: 100%;
+                            line-height: 90px;
+                        }
+
+                        div.item {
+                            height: 100%;
+                            float: left;
+
+                            // 不包括语言选择
+                            &:not(:nth-last-of-type(1)) {
+                                a {
+                                    padding: 0 28px;
+                                }
+                            }
+
+
+
+
+                        }
+
+                    }
+
+                    //导航设置完毕
+                    // 语言选择
+                    div.language {
+                        justify-self: flex-end;
+
+                        a,
+                        span {
+                            font-size: 1rem;
+                            font-weight: bold;
+                            text-decoration: none;
+                            color: #CEB7E7;
+                            transition: color 0.5s;
+
+                            &:hover {
+                                color: #FFF8FE;
+                                font-weight: bold;
+                            }
+                        }
+
+                        a.selected {
+                            font-weight: bold;
+                            color: #FFF8FE;
+                        }
+
+                    }
+                    // 语言选择结束
+                    // 隐藏1050px的语言选择
+                    div.l-language{
+                        display: none;
+                    }
+                }
+
+                //设置导航条隐藏部分 背景板
+                //height 424px
+                div.div-nav {
+                    width: 100%;
+                    position: relative;
+
+                    nav {
+                        div.second {
+                            &:hover div a {
+                                color: black;
+                            }
+                            &:hover  div.menu-div-second{
+                                height: (324/16rem);
+                                transition: height 0.5s;
+                            }
+                            div.item{
+                                position: relative;
+                                z-index: 501;
+                           }
+                           div.item {
+                                // 设置悬停时的效果
+                                &:hover>div.little-menu::before{
+                                    width: 35%;
+                                    transition: width 0.5s;
+                                }
+                                &:hover >div.little-menu{
+                                    height:(224/16rem);
+                                    transition: height 0.5s;
+                                }
+
+                            }
+
+
+                        }
+
+                        // 隐藏背景板
+                        div.menu-div-second {
+
+                            position: absolute;
+                            height: 0px;
+                            width: 100%;
+                            background-color: white;
+                            top: 90px;
+                            left: 0px;
+
+                            z-index: 500;
+                        }
+                        //隐藏菜单
+                        div.little-menu{
+                            position: absolute;
+                            width: 100%;
+                            height:0;
+                            background-color: white;
+
+                            top: 60px;
+
+                            z-index: 501;
+                            
+                        }
+                        //隐藏菜单中的小红横杠
+                        div.little-menu::before{
+                            position: absolute;
+                            content: '';
+                            background-color: #F53267;
+                            width: 0;
+                            height: (5/16rem);
+                            
+
+                            left: 0px;
+                            right: 0px;
+                            margin: 0px auto;
+
+                            z-index: 502;
+                        }
+
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}

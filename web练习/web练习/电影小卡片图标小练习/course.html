@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小练习</title>
+    <link rel="stylesheet" type="text/css" href="course-css.css">
+    <link rel="stylesheet" href="font_2465863_b450u8d4k3i/iconfont.css">
+    <style>
+        /* 卡片主体 */
+        .film-card{
+            height: auto;
+            width: 280px;
+
+            box-shadow: 0 0 2px rgb(0,0,0,0.8);
+        }
+        .card-main-font:nth-child(1){
+            font-size: 13px;
+            color: #717171;
+            margin-bottom: 16px;
+        }
+        .card-main-font:nth-child(2){
+            font-size: 10px;
+            color: #acaaaa;
+            margin-bottom: 24px;
+        }
+        .card-main-font:nth-child(3){
+            /* width: 197px; */
+            font-size: 9px;
+            color: #b7b5b5;
+            padding-left: 4px;
+            line-height: 16px;
+        }
+        .card-main-font:nth-child(2)::before{
+            content: '\e612';
+            font-family: 'iconfont';
+            padding-right: 7px;
+        }
+        div.card-footer{
+            padding: 16px 14px;
+            border-top: 1px solid #e9e9e9;
+        }
+        div.card-footer ul{
+            list-style-type:none;
+            padding: 0px;
+        }
+        div.card-footer .card-footer-ul:nth-child(1) li{
+            float: left;
+        }
+        div.card-footer .card-footer-ul:nth-child(2) li{
+            float: right;
+        }
+        div.card-footer .card-footer-ul:nth-child(1){
+            float: left;
+        }
+        div.card-footer .card-footer-ul:nth-child(2){
+            float: right;
+        }
+        div.card-picture img{
+            width: 100%;
+            vertical-align: bottom;
+        }
+        div.card-main{
+            padding: 14px 18px;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content:'';
+            display: table;
+            clear: both;
+        }
+        ul.card-footer-ul li.icon-xingxing{
+            color:#b9cb41;
+        }
+        ul.card-footer-ul li.icon-xingxing:nth-child(3),
+        ul.card-footer-ul li.icon-xingxing:nth-child(4){
+            color: #dddddd;
+        }
+        ul.card-footer-ul .icon-lianshu{
+            color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="film-card">
+        <div class="card-picture">
+            <img src="images/Layer 7.png" alt="">
+        </div>
+        <div class="card-main">
+            <h1 class="card-main-font">Animation films</h1>
+            <h2 class="card-main-font">Animations</h2>
+            <p class="card-main-font">Lorem Ipsum is simply dummy <br>text of the printing & typesetting <br>industry.</p>
+        </div>
+        <div class="card-footer clearfix">
+            <ul class="card-footer-ul clearfix">
+               <li class="iconfont icon-xingxing"></li>
+               <li class="iconfont icon-xingxing"></li>
+               <li class="iconfont icon-xingxing"></li>
+               <li class="iconfont icon-xingxing"></li>
+            </ul>
+            <ul class="card-footer-ul clearfix">
+                <li class="iconfont icon-lianshu"></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

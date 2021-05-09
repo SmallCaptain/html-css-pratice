@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东轮播图</title>
+    <style>
+        .lunbo {
+            position: relative;
+
+            width: 1180px;
+            height: 940px;
+            background-color: chartreuse;
+        }
+
+        .lunbo_btn {
+            position: absolute;
+            bottom: 50px;
+            left: 70px;
+            /* background-color: rgb(146, 146, 228); */
+            margin: 0 20px;
+            z-index: 15;
+        }
+
+        .btn_item {
+            display: inline-block;
+
+            background-color: rgb(129, 129, 129, .6);
+            background-clip: content-box;
+            border: 5px solid transparent;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            /* margin: 0 4px; */
+          
+          
+
+        }   
+        .btn_item:hover {
+            border: 5px rgb(133, 130, 130, .6) solid;
+            background-color: white;
+
+        }
+
+        .content-i {
+            display: inline-block;
+
+        }
+
+        .lunbo_img {
+            position: absolute;
+            z-index: 1;
+        }
+        .tiyu:hover{
+            z-index: 10;
+        }
+        .che:hover{
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="lunbo">
+        <div class="lunbo_btn">
+            <div class="content-i"><i class="btn_item tiyu"></i></div>
+            <div class="content-i"><i class="btn_item che"></i></div>
+            <div class="content-i"><i class="btn_item"></i></div>
+            <div class="content-i"><i class="btn_item"></i></div>
+            <div class="content-i"><i class="btn_item"></i></div>
+            <div class="content-i"><i class="btn_item"></i></div>
+            <div class="content-i"><i class="btn_item"></i></div>
+            <div class="content-i"><i class="btn_item"></i></div>
+
+
+        </div>
+        <img class="lunbo_img" src="images/图书.jpg" alt="">
+        <img class="lunbo_img" src="images/手机.jpg" alt="">
+        <img class="lunbo_img" src="images/抢购.jpg" alt="">
+        <img class="lunbo_img" src="images/健身.jpg" alt="">
+
+        <img class="lunbo_img" src="images/沐浴露.jpg" alt="">
+        <img class="lunbo_img" src="images/饼.jpg" alt="" >
+        <img class="lunbo_img che" src="images/车.jpg" alt="" >
+        <img class="lunbo_img tiyu" src="images/体育.jpg" alt="">
+
+    </div>
+
+
+</html>

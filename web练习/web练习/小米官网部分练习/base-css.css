@@ -1,0 +1,20 @@
+body{
+    margin: 0px;
+    min-width: 1226px;
+}
+.xiaomi{
+    /* position: relative; */
+    width: auto;
+    height: auto;
+
+    /* min-width: 1226px; */
+    font-size: 14px 微软雅黑;
+    color: #333;
+    margin: 0px;
+}
+.clearfix::after,
+.clearfix::before{
+    content: '';
+    display: table;
+    clear: both;
+}

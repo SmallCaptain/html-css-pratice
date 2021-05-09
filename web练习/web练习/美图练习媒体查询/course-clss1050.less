@@ -1,0 +1,131 @@
+@import url(course-clss1250.less);
+
+@media only screen and(max-width:1050px) {
+    html {
+        font-size: 16px;
+        body {
+            margin: 0px;
+
+            * {
+                margin: 0px;
+                padding: 0px;
+
+            }
+
+            div#meitu {
+                div.meitu-header {
+                    display: block;
+                    margin: 0px auto;
+                    width: 100%;
+                    height: (540/16rem);
+
+                    background-image: url(image/meitu-background.jpg);
+                    background-repeat: no-repeat;
+                    // background-size: 100% (540/16rem);
+                    background-size: contain;
+
+                    div.div-nav {
+
+                        width: 100%;
+                        height: 100%;
+
+                        nav {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            //美图logo
+                            div.first a img {
+                                width: (73/16rem);
+                                height: (20/16rem);
+                            }
+                            div.first{
+                               order: 2;
+                            }
+
+                            div.language {
+                                display: none;
+                            }
+
+                            a.i-link {
+                                order: 1;
+                                margin-left: (20/16rem);
+                                text-decoration: none;
+                                &:active +div.second{
+                                    display: flex;
+                                }
+                             
+                            }
+
+                            // 列表图标
+                            i.link {
+                                font-size: (40/16rem);
+                                color: white;
+                              
+               
+                            }
+
+                            div.i2 {
+                                order: 3;
+                                width: (40/16rem);
+                                height: (40/16rem);
+
+                            }
+                            // div.second{
+                            //     display: none;
+                            // }
+                            //隐藏菜单内容
+                            div.second{
+                                position: absolute;
+                                display:none;
+                                flex-direction: column;
+                                width: (290/16rem);
+                            //  利用包含块父元素宽度等式进行自动撑满
+                                top: 0px;
+                                bottom: 0px;
+
+                                background-color: white;
+
+                                top: 0px;
+                                justify-content: space-around;
+
+                                div.item-list {
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-shrink: 1;
+                                    flex-grow: 1;
+                                    div.item {
+                                        flex-grow: 1;
+                                        // height: (72/16rem);
+                                        text-align: center;
+                                    
+                                        a {
+                                            text-decoration: none;
+                                            color: black;
+                                        }
+                                    }
+
+                                  
+                                }
+                                div.l-language {
+                                    text-align: center;
+                                    flex-shrink: 2;
+                                    a,
+                                    span {
+                                        text-decoration: none;
+                                        color: #CEB7E7;
+                               
+                                    }
+
+                                    a.selected {
+                                        color: black;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

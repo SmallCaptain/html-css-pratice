@@ -1,0 +1,37 @@
+{
+  "id": "2455127",
+  "name": "模仿京东素材库",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "705652",
+      "name": "安卓",
+      "font_class": "anzhuo",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "16394950",
+      "name": "苹果",
+      "font_class": "pingguo",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "14110601",
+      "name": "定位",
+      "font_class": "dingwei1",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "851710",
+      "name": "箭头_下",
+      "font_class": "jiantouxia",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
+    }
+  ]
+}

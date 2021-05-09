@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 132px;
+            height: 271px;
+
+            margin: 0px auto;
+            background-image: url(images/bigtap-mitu-queue-big.png);
+
+            animation-name: mitu;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(4);
+            /* animation-direction:alternate; */
+            animation-fill-mode: none;
+            animation-delay: 0s;
+            animation-play-state: running;
+
+        }
+        @keyframes mitu{
+            from{
+                background-position: 0 0;
+
+            }
+            to{
+
+                background-position: -528px 0;
+
+            }
+        }
+        .box1:hover{
+            animation-play-state: paused;
+        }
+    </style>
+
+</head>
+<body>
+        <div class="box1">
+
+        </div>
+
+
+</body>
+</html>

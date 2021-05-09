@@ -1,0 +1,125 @@
+body{
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    overflow-x: hidden;
+}
+#main{
+    width: 1920px;
+    height: auto;
+    margin: 0 auto;
+    box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.678);
+    border: black solid 5px;
+}
+#table{
+    display: table;
+}
+#table_rew_1{
+    /*border: solid blue 2px;*/
+
+    display:table_row;
+    width: 1920px;
+    height: auto;
+    
+}
+#table_cell_1{
+
+    display: table-cell;
+    background-image: linear-gradient(Peru,SaddleBrown);
+
+
+    width: 480px;
+    height: auto;
+}
+#table_cell_2{
+    display: table-cell;
+
+    background-image: linear-gradient(Azure,#0000FF);
+    width: 1436px;
+    height: auto;
+    vertical-align: top;
+}
+p{
+    font-weight: bold;
+    font-size: 80px;
+}
+#table_cell_2 p{
+    font-weight: bold;
+    font-size: 40px;
+    
+}
+.form_1{
+    width:1030px;
+    height: auto;
+    /*border: black solid 5px;*/
+    margin: 0px auto;
+    
+    font-size: 40px;
+    font-weight: bold;
+}
+.radio{
+    width: 30px;
+    height: 30px;
+}
+#input_NOB{
+   font-size: 35px;
+   width: 250px;
+}
+#input_MABD{
+    font-size: 35px;
+}
+select{
+    font-size: 27px;
+}
+label{
+    display: block;
+    margin: -11px;
+}
+#label_E{
+    margin: 50px 0px 0px 50px;
+}
+.label_se{
+    margin: 50px 0 0 50px;
+}
+.checkbox{
+    width: 50px;
+    height: 40px;
+}
+.text{
+    font-size: 27px;
+}
+#submit{
+    font-size: 60px;
+}
+#label_submit{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+#label_submit #submit:hover{
+    color: red;
+    background-color: black;
+}
+#fieldset_1 legend{
+    margin: 0px;
+    margin-left: 50px;
+}
+#fieldset_1{
+    margin-top: 50px;
+    border: 0px;
+}
+#fieldset_1 label{
+    font-weight: 400;
+}
+#fieldset_2{
+    margin-top: 30px;
+    border: 0px;
+}
+#fieldset_2 legend{
+    margin-left: 50px;
+    margin-bottom: -40px;
+  
+}
+#fieldset_2 label{
+    font-weight: 400;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+        div.main-contain{
+            position: relative;
+
+            width: 200px;
+            height: 200px;
+
+            margin: auto;
+            margin-top: 150px;
+
+            transform-style: preserve-3d;
+            /* transform: rotateX(45deg) rotateZ(45deg); */
+
+            animation: box-rotate 20s linear infinite;
+
+            /* transform: translateY(50%); */
+        }
+        div.main-contain:hover{
+            animation-play-state: paused;
+        }
+        @keyframes box-rotate{
+            form{
+                transform:rotateX(0deg) rotateZ(0deg);
+            }
+            to{
+                transform:rotateX(360deg)rotateZ(360deg);; 
+            }
+        }
+        div.main-contain>div{
+            position: absolute;
+        }
+        div.main-contain>div img{
+            vertical-align: top;
+            opacity: 0.5;
+        }
+        div.main-contain div:nth-child(1){
+           transform: rotateY(90deg) translateZ(100px);
+        }
+        div.main-contain div:nth-child(2){
+           transform: rotateY(-90deg) translateZ(100px);
+        }
+        div.main-contain div:nth-child(3){
+            transform: rotateX(90deg) translateZ(100px);
+
+        }
+        div.main-contain div:nth-child(4){
+            transform: rotateX(-90deg) translateZ(100px);
+
+        }
+        div.main-contain div:nth-child(5){
+            transform: translateZ(-100px);
+
+        }
+        div.main-contain div:nth-child(6){
+            transform: translateZ(100px);
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-contain">
+        <div><img src="images/1.jpg" alt=""></div>
+        <div><img src="images/2.jpg" alt=""></div>
+        <div><img src="images/3.jpg" alt=""></div>
+        <div><img src="images/4.jpg" alt=""></div>
+        <div><img src="images/5.jpg" alt=""></div>
+        <div><img src="images/6.jpg" alt=""></div>
+    </div>
+    
+</body>
+</html>

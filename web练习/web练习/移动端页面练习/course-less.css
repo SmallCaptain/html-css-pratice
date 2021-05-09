@@ -1,0 +1,185 @@
+html {
+  font-size: 5.33333333vw;
+}
+body {
+  background-color: #EFF0F4;
+}
+body * {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+}
+body div.i-learn-contain {
+  width: 17.375rem;
+  margin: 0 auto;
+}
+body div.i-learn-contain header {
+  display: flex;
+  width: 17.375rem;
+  height: 4.375rem;
+  justify-content: space-between;
+  align-items: center;
+}
+body div.i-learn-contain header i {
+  font-size: 2rem;
+  color: #999999;
+}
+body div.i-learn-contain header h1 {
+  display: inline;
+  font-size: 0.8rem;
+}
+body div.i-learn-contain div.use-contain {
+  width: 17.375rem;
+  height: 15.325rem;
+}
+body div.i-learn-contain div.use-contain div.use-contain-picture {
+  width: 17.375rem;
+  height: 6.975rem;
+  margin-bottom: 1rem;
+}
+body div.i-learn-contain div.use-contain div.use-contain-picture img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul {
+  width: 17.375rem;
+  height: 6.125rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li {
+  width: 8.375rem;
+  height: 2.675rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(1) {
+  background-image: url(img/Rounded-Rectangle-3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(1) p {
+  width: 100%;
+  height: 100%;
+  line-height: 2.675rem;
+  text-align: center;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(1) p::before {
+  content: '\e67a';
+  font-family: 'iconfont';
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(2) {
+  background-image: url(img/Rounded-Rectangle-3-copy.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(2) p {
+  width: 100%;
+  height: 100%;
+  line-height: 2.675rem;
+  text-align: center;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(2) p::before {
+  content: '\e607';
+  font-family: 'iconfont';
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(3) {
+  background-image: url(img/Rounded-Rectangle-3-copy-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(3) p {
+  width: 100%;
+  height: 100%;
+  line-height: 2.675rem;
+  text-align: center;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(3) p::before {
+  content: '\e75d';
+  font-family: 'iconfont';
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(4) {
+  background-image: url(img/Rounded-Rectangle-3-copy-21.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(4) p {
+  width: 100%;
+  height: 100%;
+  line-height: 2.675rem;
+  text-align: center;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li:nth-child(4) p::before {
+  content: '\e778';
+  font-family: 'iconfont';
+  margin-right: 10px;
+  font-size: 0.8rem;
+}
+body div.i-learn-contain div.use-contain div.use-cl ul li a {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  color: #FFFFFF;
+}
+body div.i-learn-contain div.Lastest-Course {
+  width: 100%;
+}
+body div.i-learn-contain div.Lastest-Course header {
+  height: 2rem;
+  font-size: 0.8rem;
+  justify-content: space-between;
+}
+body div.i-learn-contain div.Lastest-Course header h2 {
+  font-size: 0.8rem;
+  color: #656565;
+}
+body div.i-learn-contain div.Lastest-Course div.Lastest-Course-view {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 17.075rem;
+  height: 8.275rem;
+  margin-bottom: 0.55rem;
+  overflow: auto;
+  justify-content: space-between;
+  flex-flow: row;
+}
+body div.i-learn-contain div.Lastest-Course div.Lastest-Course-view div {
+  display: flex;
+  width: 8.2rem;
+  height: 8.275rem;
+  flex-flow: column;
+  padding: 0 0.55rem;
+  margin-right: 0.55rem;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+body div.i-learn-contain div.Lastest-Course div.Lastest-Course-view div img {
+  width: 7.1rem;
+  height: 3.925rem;
+}
+body div.i-learn-contain div.Lastest-Course div.Lastest-Course-view div p {
+  font-size: 0.7rem;
+}
+body div.i-learn-contain div.Lastest-Course div.Lastest-Course-view div p:nth-of-type(2) {
+  align-self: flex-start;
+  color: #B1AEAE;
+}
+body div.i-learn-contain div.Lastest-Course div.Lastest-Course-view div p img {
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-right: 0.5rem;
+}
+/*# sourceMappingURL=./course-less.css.map */

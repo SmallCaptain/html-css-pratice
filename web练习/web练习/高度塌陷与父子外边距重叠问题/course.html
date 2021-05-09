@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高度塌陷与父子外边距重叠问题</title>
+    <link rel="stylesheet" type="text/css" href="#">
+    <style>
+        .box1{
+            width: auto;
+            height: auto;
+            background-color: orange;
+            border: red 5px solid;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color:rgb(9, 160, 54);
+            float: left;
+        }
+        .box1::after{/*对于盒子 after与before是在内容区前后*/
+            content: '';
+            display:block;
+            clear: both;
+        }
+        .clearfix::before, 
+        .clearfix::after{
+            content:'';
+            display: table;
+            clear: both;
+        }/*万能表 解决高度坍塌与父子元素外边距重叠问题*/
+        .box3{
+            margin-top: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: rgb(115, 115, 184);
+        }
+        .box4{
+            height: 100px;
+            width: 100px;
+            background-color: darkgoldenrod;
+            margin-top: 50px;/*上下外边距不重叠 取最大*/
+        }
+       /* .box3::before{/*这种办法无法解决父子外边距问题
+                        block无效 inline-block将导致自动
+                        留个字体大小的行来*/
+           /* content:'3';
+            display: inline-block;
+            clear: both;
+            font-size: 0px;
+        }*/
+        
+    </style>
+</head>
+<body>
+    <!-- 首先考虑高度塌陷 -->
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+    </div>
+    <!-- 父子外边距重叠问题 子元素外边距传递给父元素的问题 -->
+    <div class="box3 clearfix">
+        <div class="box4"></div>
+    </div>
+    
+</body>
+</html>

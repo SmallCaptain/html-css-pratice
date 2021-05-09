@@ -1,0 +1,16 @@
+{
+  "id": "2528801",
+  "name": "美图练习",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "20587144",
+      "name": "全球",
+      "font_class": "quanqiu",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    }
+  ]
+}

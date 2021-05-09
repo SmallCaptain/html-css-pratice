@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="font_2455127_b1bml9mr2wp/iconfont.css">
+    <title>京东顶部导航条</title>
+    <style>
+        /* 使主题贴合浏览器没有空行 */
+        body {
+            height: auto;
+            width: auto;
+
+            /* margin-top: 0px; */
+            margin-left: 0px;
+            margin-right: 0px;
+
+            /* overflow-y: hidden; */
+        }
+
+        /* 设置上导航条 */
+        .nav-top {
+            display: block;
+
+            width: auto;
+            height: 30px;
+            background-color: #E3E4E5;
+            margin-top: 0px;
+
+            border-bottom: 1px #ddd solid;
+
+        }
+
+        /* 设置导航条主体里面所有div部分的类别 颜色 字体 */
+        .nav-main div {
+            /* display: inline-block; */
+            font-size: 12px/30px 微软雅黑;
+            color: #999999;
+        }
+
+        /* 对主体进行设置 */
+        .nav-main {
+            width: 1190px;
+            height: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #E3E4E5;
+
+        }
+
+        /* 导航条里的超连接设置 */
+        .nav-main a {
+            font: 12px/30px 微软雅黑;
+            text-decoration: none;
+            color: #999999;
+        }
+
+        /* 设置左边条的图像标签 */
+        .nav-main-position-city::before {
+            content: '\e626';
+            font-family: 'iconfont';
+            /* margin-right: 4px; */
+            font-size: 14px;
+            color: red;
+        }
+
+        /* 右侧条与左侧条之间空行的设置 浮动实现 */
+        .nav-main-aside {
+
+            float: right;
+            width: auto;
+            height: auto;
+        }
+
+        /* 统一再设置导航条里字体 盒子高度宽度 */
+
+        .nav-main-aside,
+        .nav-main-aside div,
+        .nav-aside-1 {
+            width: auto;
+            height: auto;
+            font: 12px/2 微软雅黑 #999999;
+            border: 1px solid transparent;
+
+            margin: auto 0px;
+            /* padding-left: 7px; */
+            /* padding-right: 7px;             */
+
+        }
+
+        /* 对导航条第二个元素设置颜色 */
+        .nav-main-1 a:nth-child(2) {
+            color: red;
+        }
+
+        /* 间隔设置 */
+        span.nav-aside-1 {
+            font-size: 11px;
+        }
+
+        /* 超链接颜色设置 */
+        .nav-main-5 a {
+            color: red;
+        }
+
+        /* 超连接悬停设置 */
+        .nav-main-1 a:hover,
+        .nav-main-2 a:hover,
+        .nav-main-3 a:hover,
+        .nav-main-4 a:hover {
+            color: red;
+
+        }
+
+        /* 超链接父元素的悬停设置 */
+
+        .nav-main-position:hover .nav-main-position-city,
+        .nav-main-3:hover .myshop,
+        .nav-main-5:hover .myshop,
+        .nav-main-6:hover .myshop,
+        .nav-main-7:hover .myshop {
+            background-color: white;
+            border: 1px solid #CCCCCC;
+            border-bottom: transparent;
+            /* outline: black 1px solid; */
+            z-index: 500;
+
+        }
+
+        /* 解决超链接悬停时的边框问题 */
+        .nav-main-3,
+        .nav-main-5,
+        .nav-main-6,
+        .nav-main-7,
+        .nav-main-position-city {
+            border: 1px solid transparent;
+
+        }
+
+        /* 右侧导航条里 所有div内边距设置 */
+        .nav-main-aside div {
+            padding: 0px 7px;
+            float: left;
+
+        }
+
+        .nav-main-aside span {
+            float: left;
+            border: 0px;
+            margin-top: 7px;
+        }
+
+        /* 右边设置标签图像 */
+        .nav-main-3 .myshop::after,
+        .nav-main-5 .myshop::after,
+        .nav-main-6 .myshop::after,
+        .nav-main-7 .myshop::after {
+            content: '\e61e';
+            font-family: 'iconfont';
+            font-size: 5px;
+        }
+
+        /* 解决高度坍塌 */
+        .clearfix::after,
+        .clearfix::before {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        /* 右边条地址的父元素 */
+        div.nav-main-position-city {
+
+            float: left;
+
+        }
+
+        /* 隐藏的城市菜单 */
+        .nav-main-position .current-city {
+            /* visibility: hidden; */
+            display: none;
+            position: absolute;
+            z-index: 400;
+
+            width: 300px;
+            height: 460px;
+            background-color: white;
+
+            border: 1px solid #CCCCCC;
+            box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.5);
+
+            top: 30px;
+            left: 0px;
+
+            padding: 10px;
+        }
+
+        /* 地区前段部分 */
+        div.current-city div.current-city-top {
+            width: auto;
+            height: auto;
+        }
+
+        div.current-city div.current-city-top div {
+            width: 60px;
+            height: 27px;
+
+            padding: 2px 0px;
+            margin: 0px;
+            float: left;
+        }
+
+        div.current-city div.current-city-top a {
+            display: inline-block;
+
+            /* height: 24px; */
+            padding: 0px 8px;
+
+            font: 12px/31px 微软雅黑 #9999;
+
+        }
+
+        div.current-city div.current-city-top a:hover {
+            background-color: #F4F4F4;
+            color: red;
+        }
+
+        /* 显示当前地区 选中部分 */
+        div.current-city-top .selected {
+            background-color: red;
+            color: white;
+
+        }
+
+        /* 地区前段部分结束 */
+        /* 地区中段部分 */
+        div.current-city .current-city-middle {
+
+            border-top: 1px #EEEEEE dotted;
+            margin: 10px 0px 10px 10px;
+        }
+
+        div.current-city p.current-city-middle-p {
+            font: 12px/2 微软雅黑 #9999;
+            margin: 9px 0px;
+        }
+
+        div.current-city-middle div.area_name {
+            width: 145px;
+
+            float: left;
+        }
+
+        div.current-city-middle div.area_name a {
+            display: inline-block;
+            width: 145px;
+        }
+
+        /* 地区中段部分结束 */
+        /* 地区后段部分开始 */
+        div.current-city-bottom {
+            border-top: 1px #EEEEEE dotted;
+            margin: 10px 0px 10px 10px;
+        }
+
+        div.current-city-bottom p.current-city-bottom-p {
+            margin: 9px 0px 9px 0px;
+        }
+
+        div.current-city-bottom div {
+
+            width: 120px;
+            margin-left: 9px;
+            float: left;
+        }
+
+        /* 地区后段部分结束 */
+        /* 三个地区设置的公共部分 */
+        div.current-city div.current-city-bottom a:hover,
+        div.current-city div.current-city-middle a:hover {
+            color: red;
+
+        }
+
+        /* 三个地区设置的公共部分结束 */
+        /* 悬停时的菜单 */
+        div.nav-main-position:hover div.current-city,
+        div.nav-main-3:hover div.mylist,
+        div.nav-main-5:hover div.caigou-list,
+        div.nav-main-6:hover div.kefu-fuwu,
+        div.nav-main-7:hover div.web-lidear,
+        div.nav-main-8:hover div.jd_phone {
+            /* visibility: unset; 我觉得还是用这个好点*/
+            display: block;
+
+        }
+
+        /* 左菜单子元素 */
+        .nav-main-position-city {
+            position: relative;
+            width: 100%;
+            height: 30px;
+            /* background-color: red; */
+            padding-right: 7px;
+            z-index: 500;
+
+        }
+
+        /* 左菜单父元素开启定位 */
+        .nav-main-position {
+            position: relative;
+            height: 31px;
+
+            border: 0px;
+            border: 1px solid transparent;
+            z-index: 1;
+
+            float: left;
+        }
+
+        /* 我的京东隐藏菜单 */
+        div.mylist {
+            display: none;
+
+            position: absolute;
+            width: 282px;
+            height: 163px;
+            background-color: white;
+
+            border: 1px solid #CCCCCC;
+            box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.5);
+
+            padding: 0px;
+            margin: 0px;
+
+            top: 28px;
+            left: 0px;
+
+            z-index: 499;
+
+        }
+
+        /* 我的京东内容 */
+        /* 顶层 */
+        div.nav-main-3 div.mylist-top {
+            width: 265px;
+            height: 72px;
+            padding: 10px 0px 10px 15px;
+        }
+
+        div.nav-main-3 div.mylist-top div,
+        div.nav-main-3 div.mylist-bottom div {
+            width: 126px;
+            height: 24px;
+
+            padding: 0;
+            border: 0px;
+            float: left;
+
+        }
+
+        /* 顶层结束 */
+        /* 底层 */
+        div.nav-main-3 div.mylist-bottom {
+            width: 265px;
+            height: 48px;
+            padding: 10px 0px 10px 15px;
+
+            border-top: 1px dotted #EEEEEE;
+        }
+
+        /* 底层结束 */
+        /* 我的京东内容结束 */
+
+        /* 企业采购隐藏菜单 */
+        div.caigou-list {
+            display: none;
+            position: absolute;
+
+            width: 140px;
+            height: 96px;
+
+            background: white;
+
+            border: 1px solid #CCCCCC;
+            box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.5);
+
+            padding: 10px 0px 10px 15px;
+            z-index: 499;
+
+            top: 28px;
+        }
+
+        /* 企业采购菜单部分 */
+        div.caigou-list div {
+            width: 68px;
+            height: 24px;
+
+            padding: 0px;
+            border: 0px;
+            float: left;
+
+        }
+
+        div.caigou-list div a {
+            font: 12px/1 微软雅黑;
+            color: #999999;
+        }
+
+        div.caigou-list div a:hover {
+            color: red;
+        }
+
+        div.caigou-list div.l {
+            width: 112px;
+        }
+
+        /* 客服服务隐藏菜单 */
+        div.kefu-fuwu {
+            display: none;
+
+            position: absolute;
+
+            width: 170px;
+            height: 251px;
+
+            background-color: white;
+            padding: 10px 0px;
+            margin: 0px;
+
+            border: 1px solid #CCCCCC;
+            box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.5);
+
+            z-index: 499;
+            top: 28px;
+            left: -96px;
+        }
+
+        /* 客服服务内容上半部分 */
+        div.kefu-fuwu div.kefu-fuwu-top {
+            width: 155px;
+            height: 144px;
+
+            padding: 0px 0px 0px 15px;
+        }
+
+        div.kefu-fuwu div.kefu-fuwu-top div {
+            width: 76px;
+            height: 24px;
+
+            padding: 0px;
+            margin: 0px;
+
+            border: 0px;
+
+            float: left;
+        }
+
+        div.kefu-fuwu div.kefu-fuwu-top p {
+            color: #666666;
+            font-size: 12px;
+            font-weight: bold;
+
+            margin: 0px;
+        }
+
+        /* 客服服务内容下半部分 */
+        div.kefu-fuwu div.kefu-fuwu-bottom {
+            /* background-color: red; */
+            widows: 155px;
+            height: 106px;
+
+            margin: 0px;
+            padding: 0px 0px 0px 15px;
+            border: 0px;
+            border-top: 1px dotted #9999;
+        }
+
+        div.kefu-fuwu div.kefu-fuwu-bottom p {
+            font-size: 12px;
+            font-weight: bold;
+            color: #666666;
+
+            margin: 5px 0px 0px 0px;
+        }
+
+        div.kefu-fuwu div.kefu-fuwu-bottom div {
+            width: 76px;
+            height: 24px;
+
+            padding: 0px 0px 0px 0px;
+            margin: 0px;
+
+            border: 0px;
+
+            float: left;
+        }
+
+        div.kefu-fuwu div.kefu-fuwu-bottom a:hover,
+        div.kefu-fuwu div.kefu-fuwu-top a:hover {
+            color: red;
+        }
+
+        /* 客服服务内容下半部分结束 */
+
+        /* 网站导航隐藏菜单 */
+        div.web-lidear {
+            display: none;
+            position: absolute;
+
+            width: 1180px;
+            height: 149px;
+
+            border: 1px solid #CCCCCC;
+            box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.5);
+            margin: 0px;
+            padding: 15px 0px 15px 0px;
+            z-index: 499;
+
+            top: 28px;
+            left: -1057px;
+
+        }
+
+        /* 网站导航内容区 */
+        /* 公共部分 */
+        div.web-lidear div {
+            width: 85px;
+            height: 24px;
+
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+
+            float: left;
+        }
+
+        div.web-lidear-div:nth-child(1),
+        div.web-lidear-div:nth-child(2),
+        div.web-lidear-div:nth-child(3),
+        div.web-lidear-div:nth-child(4) {
+
+            width: 255px;
+            height: 24px;
+
+            margin: 0px;
+            padding: 0px 0px 0px 17px;
+            border: 0px;
+        }
+
+        div.web-lidear-div:nth-child(1) {
+            width: 340px;
+        }
+
+        div.web-lidear-div:nth-child(1) p,
+        div.web-lidear-div:nth-child(2) p,
+        div.web-lidear-div:nth-child(3) p,
+        div.web-lidear-div:nth-child(4) p {
+            font: 12px/24px 微软雅黑;
+            height: 24px;
+
+            color: #666666;
+            margin: 0px 0px 5px 0px;
+            padding: 0px;
+            border: 0px;
+
+        }
+
+        div.web-lidear-div:nth-child(1) a:hover,
+        div.web-lidear-div:nth-child(2) a:hover,
+        div.web-lidear-div:nth-child(3) a:hover,
+        div.web-lidear-div:nth-child(4) a:hover {
+            color: red;
+        }
+
+        div.web-lidear-div:nth-child(2),
+        div.web-lidear-div:nth-child(3),
+        div.web-lidear-div:nth-child(4) {
+            border-left: 1px dotted #eee;
+        }
+
+        /* 导航区第一个部分 */
+
+        div.web-lidear-div:nth-child(1) {
+            width: 340px;
+            height: 149px;
+
+            /* background-color: red; */
+
+        }
+
+        /* 第二个部分 */
+        div.web-lidear-div:nth-child(2) {
+            width: 255px;
+            height: 149px;
+
+        }
+
+        /* 第三个部分 */
+        div.web-lidear-div:nth-child(3) {
+            width: 255px;
+            height: 149px;
+
+        }
+
+        /* 第四个部分 */
+        div.web-lidear-div:nth-child(4) {
+            width: 255px;
+            height: 125px;
+
+        }
+
+        /* 网站导航内容区结束 */
+
+        /* 手机京东导航隐藏菜单 */
+        div.jd_phone {
+            display: none;
+            position: absolute;
+
+            width: 190px;
+            height: auto;
+
+            background-color: white;
+
+            padding: 0px;
+            margin: 0px;
+
+            border: 1px solid #CCCCCC;
+            box-shadow: 0px 0px 2px rgba(128, 128, 128, 0.5);
+            border-bottom: 2px #60575A solid;
+
+
+            top: 28px;
+            left: -148px;
+
+            z-index: 499;
+        }
+
+        /* 手机京东内容区开始 */
+        /* 手机京东内容区公共部分 */
+        div.jd-phone-div .div-img {
+            display: inline-block;
+            padding-left: 0px;
+        }
+
+        div.jd-phone-div p {
+
+            width: 180px;
+
+            margin: 0px;
+            font: 12px 微软雅黑;
+            color: red;
+
+        }
+
+        div.jd-phone-div span {
+            color: black;
+            font-weight: bold;
+        }
+        /* 手机京东内容区公共部分结束 */
+        .div-img-i1::before{
+            content: '\e61a';
+            font-family: 'iconfont';
+            font-size: 20px;
+            color: black;
+
+            padding-left: -10px;
+        }
+        .div-img-i1::after{
+            content: '\e603';
+            font-family: 'iconfont';
+            font-size: 20px;
+            color: green;
+
+        }
+        /* 手机京东内容区结束 */
+
+        /* 右侧导航条父元素父元素 */
+        div.nav-main-3,
+        div.nav-main-5,
+        div.nav-main-6,
+        div.nav-main-7,
+        div.nav-main-8 {
+            position: relative;
+            height: 31px;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        /* 给我的京东超连接加上一个父元素 同时用于接下来的四个框 */
+        div.myshop {
+            position: relative;
+
+            width: 74px;
+            height: 28px !important;
+            /* width: 100%; */
+            /* height: 100%; */
+            /* background-color: white; */
+
+            padding: 0px;
+
+        }
+
+        div.myshop a {
+            padding-left: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav-top">
+        <div class="nav-main clearfix">
+            <div class="nav-main-position">
+                <div class="nav-main-position-city">
+                    <a href="#">福建</a>
+                </div>
+                <!-- </br> -->
+                <div class="current-city">
+                    <!-- 划分为上下俩部分 -->
+                    <div class="current-city-top clearfix">
+                        <div><a href="">北京</a></div>
+                        <div><a href="">上海</a></div>
+                        <div><a href="">天津</a></div>
+                        <div><a href="">重庆</a></div>
+                        <div><a href="">河北</a></div>
+                        <div><a href="">山西</a></div>
+                        <div><a href="">河南</a></div>
+                        <div><a href="">辽宁</a></div>
+                        <div><a href="">吉林</a></div>
+                        <div><a href="">黑龙江</a></div>
+                        <div><a href="">内蒙古</a></div>
+                        <div><a href="">江苏</a></div>
+                        <div><a href="">山东</a></div>
+                        <div><a href="">安徽</a></div>
+                        <div><a href="">浙江</a></div>
+                        <div><a class="selected" href="">福建</a></div>
+                        <div><a href="">湖北</a></div>
+                        <div><a href="">湖南</a></div>
+                        <div><a href="">广东</a></div>
+                        <div><a href="">广西</a></div>
+                        <div><a href="">江西</a></div>
+                        <div><a href="">四川</a></div>
+                        <div><a href="">海南</a></div>
+                        <div><a href="">贵州</a></div>
+                        <div><a href="">云南</a></div>
+                        <div><a href="">西藏</a></div>
+                        <div><a href="">陕西</a></div>
+                        <div><a href="">甘肃</a></div>
+                        <div><a href="">青海</a></div>
+                        <div><a href="">宁夏</a></div>
+                        <div><a href="">新疆</a></div>
+                        <div><a href="">港澳</a></div>
+                        <div><a href="">台湾</a></div>
+                        <div><a href="">钓鱼岛</a></div>
+                        <div><a href="">海外</a></div>
+                    </div>
+                    <div class="current-city-middle clearfix">
+                        <p class="current-city-middle-p">地区专享版本</p>
+                        <div class="area_name"><a href="">中國港澳</a></div>
+                        <div class="area_name"><a href="">中國台湾</a></div>
+                        <div class="area_name"><a href="">京东全球</a></div>
+                    </div>
+                    <div class="current-city-bottom clearfix">
+                        <p class="current-city-bottom-p">Available Sites</p>
+                        <div class="area_name_global"><a href="">Global Site</a></div>
+                        <div class="area_name_global"><a href="">Сайт России</a></div>
+                        <div class="area_name_global"><a href=""> Situs Indonesia</a></div>
+                        <div class="area_name_global"><a href="">Sitio de España</a></div>
+                        <div class="area_name_global"><a href="">เว็บไซต์ประเทศไทย</a></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="nav-main-aside">
+                <div class="nav-main-1">
+                    <a href="#">你好,请登录</a>
+                    <a href="#">免费注册</a>
+
+                </div>
+                <span class="nav-aside-1">|</span>
+                <div class="nav-main-2">
+                    <a href="#">我的订单</a>
+                </div>
+                <span class="nav-aside-1">|</span>
+
+                <div class="nav-main-3">
+                    <div class="myshop">
+                        <a href="#"> 我的京东</a>
+                    </div>
+                    <div class="mylist">
+                        <div class="mylist-top clearfix">
+                            <div><a href="">待处理订单</a></div>
+                            <div><a href="">消息</a></div>
+                            <div><a href="">返修退换货</a></div>
+                            <div><a href="">我的问答</a></div>
+                            <div><a href="">降价商品</a></div>
+                            <div><a href="">我的关注</a></div>
+                        </div>
+                        <div class="mylist-bottom clearfix">
+                            <div><a href="">我的京豆</a></div>
+                            <div><a href="">我的优惠券</a></div>
+                            <div><a href="">我的白条</a></div>
+                            <div><a href="">我的理财</a></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <span class="nav-aside-1">|</span>
+                <div class="nav-main-4">
+                    <a href="#">京东会员</a>
+                </div>
+                <span class="nav-aside-1">|</span>
+                <div class="nav-main-5 clearfix">
+                    <div class="myshop">
+                        <a href="#">企业采购</a>
+                    </div>
+                    <div class="caigou-list  clearfix">
+                        <div><a href="">企业购</a></div>
+                        <div><a href="">商用场景馆</a></div>
+                        <div><a href="">工业品</a></div>
+                        <div><a href="">丰客多商城</a></div>
+                        <div><a href="">礼品卡</a></div>
+                        <div><a href="">微信企业购</a></div>
+                        <div class="l"><a href="">大中型企业采购</a></div>
+                    </div>
+
+                </div>
+                <span class="nav-aside-1">|</span>
+                <div class="nav-main-6 ">
+                    <div class="myshop">
+                        <a href="#">客户服务</a>
+                    </div>
+                    <div class="kefu-fuwu">
+                        <div class="kefu-fuwu-top clearfix">
+                            <p>客户</p>
+                            <div><a href="">帮助中心</a></div>
+                            <div><a href="">售后服务</a></div>
+                            <div><a href="">在线客服</a></div>
+                            <div><a href="">意见建议</a></div>
+                            <div><a href="">电话客服</a></div>
+                            <div><a href="">客服邮箱</a></div>
+                            <div><a href="">金融咨询</a></div>
+                            <div><a href="">全球售客服</a></div>
+                            <div><a href="">企业客服</a></div>
+
+                        </div>
+                        <div class="kefu-fuwu-bottom clearfix">
+                            <p>商户</p>
+                            <div><a href="">合作招商</a></div>
+                            <div><a href="">成长中心</a></div>
+                            <div><a href="">商家后台</a></div>
+                            <div><a href="">京麦工作台</a></div>
+                            <div><a href="">商家帮助</a></div>
+                            <div><a href="">规则平台</a></div>
+                        </div>
+
+                    </div>
+                </div>
+                <span class="nav-aside-1">|</span>
+                <div class="nav-main-7">
+                    <div class="myshop">
+                        <a href="#">网站导航</a>
+                    </div>
+                    <div class="web-lidear clearfix">
+                        <!-- 1 -->
+                        <div class="web-lidear-div">
+                            <p>特色主题</p>
+                            <div><a href="">新品首发</a></div>
+                            <div><a href="">京东金融</a></div>
+                            <div><a href="">全球售</a></div>
+                            <div><a href="">国际站</a></div>
+                            <div><a href="">京东会员</a></div>
+                            <div><a href="">台湾售</a></div>
+                            <div><a href="">俄语站</a></div>
+                            <div><a href="">装机大师</a></div>
+                            <div><a href="">港澳售</a></div>
+                            <div><a href="">优惠券</a></div>
+                            <div><a href="">秒杀</a></div>
+                            <div><a href="">闪购</a></div>
+                            <div><a href="">印尼站</a></div>
+                            <div><a href="">陪伴计划</a></div>
+                            <div><a href="">出海招商</a></div>
+                            <div><a href="">拍拍二手</a></div>
+                            <div><a href="">买什么</a></div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="web-lidear-div">
+                            <p>行业频道</p>
+                            <div><a href="">手机</a></div>
+                            <div><a href="">智能数码</a></div>
+                            <div><a href="">玩3C</a></div>
+                            <div><a href="">电脑办公</a></div>
+                            <div><a href="">家用电器</a></div>
+                            <div><a href="">京鱼座智能</a></div>
+                            <div><a href="">京东服饰</a></div>
+                            <div><a href="">京东生鲜</a></div>
+                            <div><a href="">家装城</a></div>
+                            <div><a href="">母婴</a></div>
+                            <div><a href="">食品</a></div>
+                            <div><a href="">农资频道</a></div>
+                            <div><a href="">整车</a></div>
+                            <div><a href="">图书</a></div>
+                            <div><a href="">劳动防护</a></div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="web-lidear-div">
+                            <p>生活服务</p>
+                            <div><a href="">京东众筹</a></div>
+                            <div><a href="">白条</a></div>
+                            <div><a href="">京东金融App</a></div>
+                            <div><a href="">京东小金库</a></div>
+                            <div><a href="">理财</a></div>
+                            <div><a href="">话费</a></div>
+                            <div><a href="">水电煤</a></div>
+                            <div><a href="">彩票</a></div>
+                            <div><a href="">旅行</a></div>
+                            <div><a href="">机票酒店</a></div>
+                            <div><a href="">电影票</a></div>
+                            <div><a href="">京东到家</a></div>
+                            <div><a href="">游戏</a></div>
+                            <div><a href="">拍拍回收</a></div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="web-lidear-div">
+                            <p>更多精选</p>
+                            <div><a href="">合作招商</a></div>
+                            <div><a href="">京东通信</a></div>
+                            <div><a href="">京东E卡</a></div>
+                            <div><a href="">企业采购</a></div>
+                            <div><a href="">服务市场</a></div>
+                            <div><a href="">办公生活馆</a></div>
+                            <div><a href="">校园加盟</a></div>
+                            <div><a href="">京东社区</a></div>
+                            <div><a href="">游戏社区</a></div>
+                            <div><a href="">知识产权维权</a></div>
+                        </div>
+
+                    </div>
+                </div>
+                <span class="nav-aside-1">|</span>
+                <div class="nav-main-8">
+                    <div class="myshop">
+                        <a href="#">手机京东</a>
+                    </div>
+
+                    <div class="jd_phone">
+                        <div class="jd-phone-div">
+                            <div class="div-img">
+                                <img src="images/5.png" width="80px" height="80px" alt="">
+                            </div>
+                            <p><span>手机京东</span><br><br>新人专享大礼包<br></p>
+                            <i class="div-img-i1"></i>
+
+                        </div>
+                        <div class="jd-phone-div">
+                            <div class="div-img">
+                                <img src="images/3.png" width="80px" height="80px" alt="">
+                                </div>
+
+                                <p><span>关注京东<br>JD.COM</span><br><br><br>抢5元红包</p>
+
+                            
+                        </div>
+                        <div class="jd-phone-div">
+                            <div class="div-img">
+                                <img src="images/2.jpg" width="80px" height="80px" alt="">
+                            </div>
+                                <p><span>京东金融客户端</span><br><br>新人专享大礼包</p>
+                                <i class="div-img-i1"></i>
+                          
+                        </div>
+                        <div class="jd-phone-div">
+                            <div class="div-img">
+                                <img src="images/4.png" width="80px" height="80px" alt="">
+                            </div>
+                                <p><span>京东健康客户端</span><br><br>新人专享大礼包</p>
+                                <i class="div-img-i1"></i>
+                            
+                        </div>
+                        <div class="jd-phone-div">
+                            <div class="div-img">
+                                <img src="images/1.jpg" width="80px" height="80px" alt="">
+                            </div>
+                                <p><span>关注京东小程序</span><br><br>新人0.1元购</p>
+
+                            
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>

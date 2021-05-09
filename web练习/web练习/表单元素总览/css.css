@@ -1,0 +1,34 @@
+html,body{
+    font-weight: bold;
+    font-size: 14px;
+   /* overflow: hidden;*/
+}
+#main{
+    background-color:cadetblue;
+
+    width: 700px;
+    height: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+form{
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+#section_one{
+    width: 200px;
+    margin:0 auto;
+    padding-left: 18px;
+    padding-top: 18px;
+    background-color: brown;
+}
+div.null{
+    width: 20px;
+    height: 278px;
+}
+#section_two{
+    margin-left: 0px;
+}
+
