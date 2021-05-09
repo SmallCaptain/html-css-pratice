@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS 2D旋转练习</title>
+        <style>
+            .box{
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                transition: transform 2s;
+                
+            }
+            #box1{
+                top: 400px;
+               
+            }
+            #box2{
+                top: 100px;
+                left: 400px;
+            }
+            #box3{
+                top: 400px;
+                left: 400px;
+            }
+            #box4{
+                top: 100px;
+               
+            }
+            #box1:hover{
+                transform: rotate(60deg);   box-shadow:grey 10px 10px 10px;
+            }
+            #box2:hover{
+                transform: scale(1.1,1.1);   box-shadow:grey 10px 10px 10px;
+            }
+            #box3:hover{
+                transform: skew(30deg,20deg);   box-shadow:grey 10px 10px 10px;
+            }
+            #box4:hover{
+                transform: translate(50px,100px);  box-shadow:grey 10px 10px 10px ;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+        <div id="box4" class="box"></div>
+    </body>
+</html>
